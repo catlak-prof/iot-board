@@ -6,7 +6,6 @@ from django.http import Http404, JsonResponse
 from data.models import Data
 from data.serializers import DataSerializer
 
-
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
@@ -14,7 +13,7 @@ from rest_framework.parsers import JSONParser
 
 
 @csrf_exempt
-def data_detail(request):
+def data(request):
     """
     List all code snippets, or create a new snippet.
     """
@@ -58,5 +57,6 @@ def data_detail(request, pk):
         return HttpResponse(status=204)
 
 def index(request):
-    response = "index"
+    response = "burası anasayfadır"
     return HttpResponse(response)
+

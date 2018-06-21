@@ -1,6 +1,4 @@
 from django.contrib import admin
 from data.models import Data
-admin.site.register(Data)
-
 # Register your models here.
-
+admin.site.register(Data)
