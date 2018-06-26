@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+
+
+        <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="login.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <title>KAYDOL</title>
+
+  <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="signup.css">
+
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+
+    </div>
+
+   <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+            <body class="text-center">
+                <form class="form-signup" action="" method="post">
+                    {% csrf_token %}
+
+                  <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                  <h1 class="h3 mb-3 font-weight-normal">KAYDOL</h1>
+                  <label for="user" class="sr-only">Email address</label>
+                  <input type="email" id="user" name="user" class="form-control" placeholder="Email address" required autofocus>
+                  <label for="password1" class="sr-only">Password</label>
+                  <input type="password" id="password1" name="password1" class="form-control" placeholder="Password" required>
+                  <div class="checkbox mb-3">
+
+
+                  <label for="password2" class="sr-only">Please re-enter your password</label>
+                  <input type="password" id="password2" name="Password2" class="form-control" placeholder="Please re-enter your password" required>
+
+                  <div class="checkbox mb-3">
+
+
+                  <input type="checkbox"  id="lisans" value="lisans-accept"><a href="http://127.0.0.1:8000/register/" onclick="kontrol()"> Lisans sözleşmesini kabul ediyorum</a>
+
+
+
+                  </div>
+
+
+
+                    <script type="text/javascript">
+                      function kontrol()
+
+                      {
+                        console.log("kontrole girildi");
+                        var inputPassword,inputPassword2,lisans,text;
+                        var canan=document.getElementById("lisans");
+                        var pass1=document.getElementById("inputPassword");
+                        var pass2=document.getElementById("inputPassword2");
+
+
+                        if (canan.checked==true) {
+
+                          alert("lisansı onayladınız...");
+                        }
+                        else{
+                          alert("lisans alanı boş bırakılamaz");
+
+
+                        }
+
+                        if(!(pass1==pass2)) {
+                          alert("şifreler aynı değil...");
+                          return false;
+
+                        }
+
+                        document.getElementById("inputPassword,inputPassword2").value;
+
+                        return true;
+                      }
+
+                    </script>
+
+                  <button class="btn btn-lg btn-primary btn-block" id="myCheck" type="submit"><a href="#" onclick="kontrol()">KAYDOL</a></button>
+                  <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+
+                </form>
+            </body>
+        </div>
+
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+    </div>
+  </div>
+</div>
+</html>

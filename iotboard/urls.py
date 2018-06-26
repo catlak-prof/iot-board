@@ -16,13 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 ##################################
-from data import views
+from data import views as data
+from user import views as user
 
 
 
 urlpatterns = [
-    path('', views.index,name="index"),
-    path('data/', views.data,name="data"),
-    path('data/<pk>', views.data_detail,name="data_detail"),
+    path('', data.index,name="index"),
+    path('data/', data.data,name="data"),
+    path('data/<pk>', data.data_detail,name="data_detail"),
+    path('login/', user.login_view, name="login_view"), # login için oluşturulan url
+    path('register/', user.register_view, name="register_view"), #register için oluşturulan url
+    path('logout/' , user.logout_view, name="logout_view"), #rçıkış için oluşturulan url
+    path('login/message.html' , user.login_view, name="login_viw"),
     path('admin/', admin.site.urls),#proje ile gelen path
 ]

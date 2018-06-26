@@ -57,6 +57,5 @@ def data_detail(request, pk):
         return HttpResponse(status=204)
 
 def index(request):
-    response = "burası anasayfadır"
-    return HttpResponse(response)
-
+    # response = "burası anasayfadır"
+    return render(request, 'index.html')
