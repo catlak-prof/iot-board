@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'user',
     'data',
     'device',
-    'rest_framework'
+    'rest_framework',
+    'templates',
 ]
 
 MIDDLEWARE = [

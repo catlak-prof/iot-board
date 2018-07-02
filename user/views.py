@@ -43,13 +43,17 @@ def register_view(request):
 
         # user.is_staff = user.is_superuser = True #admin paneline girmek için verilen yetkidir
         user.save()
-        new_user = authenticate(username=user.user, password=password)
+        new_user = authenticate(username=user.username, password=password)
+        # new_user = authenticate(username=form.cleaned_data['user'], password = form.cleaned_data['password'])
         login(request, new_user)
 
-        #return redirect('register')
+    #     return redirect('register.html')
+    #
+    # return render(request, "templates/register.html", {"form": form, 'title': 'Üye Ol'})
 
-        return render(request, 'message.html')
+        return render(request, 'index.html')
     else:
+        print(form.errors)
         return render(request, "register.html", locals())
 
 ##########################

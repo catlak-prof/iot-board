@@ -28,6 +28,5 @@ urlpatterns = [
     path('login/', user.login_view, name="login_view"), # login için oluşturulan url
     path('register/', user.register_view, name="register_view"), #register için oluşturulan url
     path('logout/' , user.logout_view, name="logout_view"), #rçıkış için oluşturulan url
-    path('login/message.html' , user.login_view, name="login_viw"),
     path('admin/', admin.site.urls),#proje ile gelen path
 ]
