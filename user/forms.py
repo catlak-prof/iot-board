@@ -20,7 +20,7 @@ class RegisterForm(forms.ModelForm):
     username = forms.CharField(max_length=100, label='Kullanıcı Adı')
     password1 = forms.CharField(max_length=100, label='Parola', widget=forms.PasswordInput)
     password2 = forms.CharField(max_length=100, label='Parola Doğrulama', widget=forms.PasswordInput)
-    # onay = forms.BooleanField()
+    onay = forms.BooleanField()
 
     class Meta:
         model = User
@@ -33,11 +33,11 @@ class RegisterForm(forms.ModelForm):
     def clean_password2(self):
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
-        onay = self.cleaned_data.get("onay")
+        # onay = self.cleaned_data.get("onay")
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError("Şifreler eşleşmiyor!")
-        if not onay:
-            raise forms.ValidationError("Lütfen onay işlemini yapınız")
+        # if not onay:
+        #     raise forms.ValidationError("Lütfen onay işlemini yapınız")
         return password2
 
 ###############################
