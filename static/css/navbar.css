@@ -1,0 +1,60 @@
+header,footer,section,aside,article
+{display:block;}/*display:block yazıları bir bütün halinde tutar */
+
+body {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+#Formalanı{
+  left: 80px;
+  width:300px;
+  height:200px;
+   /*sola yaslar*/
+  color:black;
+  font-family:  Sans-serif;
+
+
+
+}
+#acıklama{
+  padding-top: 0px;
+}
+
+#sağ_kisim{
+  padding-left: 800px;
+}
+#inputPassword{
+  width:200px;
+  height:45px;
+}
+#isim{
+
+}
+#acıklama1{
+  left: 80px;
+  width:300px;
+  height:45px;
+}
+#metinalani {
+  width: 96%;
+  padding-top: 10px;
+}
+@media (max-width:800px) {
+  #metinalani {
+    display:none !important;
+    position: fixed;
+    top:0;
+    padding:0px;
+    width:1200px;
+    height:0px;
+    padding-left:700px;
+  } }
+
+
+
+
+
