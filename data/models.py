@@ -6,7 +6,7 @@ from django.db import models
 # Create your models here.
 class  Data(models.Model):
 
-    device=models.ForeignKey(Device,related_name="device_data",on_delete=models.CASCADE)
+    device=models.ForeignKey(Device,related_name="device_data",on_delete=models.CASCADE, name="device")
 
     alan1=models.CharField(max_length=20,blank=True,null=True)
     alan2=models.CharField(max_length=20, blank=True, null=True)
@@ -16,4 +16,7 @@ class  Data(models.Model):
     alan6=models.CharField(max_length=20,blank=True,null=True)
     alan7=models.CharField(max_length=20,blank=True,null=True)
     alan8=models.CharField(max_length=20,blank=True,null=True)
+
+    def __str__(self):
+        return self.device.isim
 

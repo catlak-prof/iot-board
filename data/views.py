@@ -11,6 +11,8 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
+from user.forms import RegisterForm
+
 
 @csrf_exempt
 def data(request):
@@ -58,4 +60,5 @@ def data_detail(request, pk):
 
 def index(request):
     # response = "burası anasayfadır"
-    return render(request, 'index.html')
+    form=RegisterForm()
+    return render(request, 'index.html',locals())

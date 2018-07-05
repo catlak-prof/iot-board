@@ -5,6 +5,3 @@ class DataSerializer(serializers.ModelSerializer):
     class Meta:
         model = Data
         fields = ('device', 'alan1', 'alan2', 'alan3', 'alan4', 'alan5', 'alan6', 'alan7', 'alan8')
-
-
-

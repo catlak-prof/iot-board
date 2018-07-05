@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import LoginForm, RegisterForm
+from .forms import RegisterForm
 from django.contrib.auth.models import User
 
 # Create your views here.

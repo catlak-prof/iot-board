@@ -19,4 +19,7 @@ class Device(models.Model):
     alan7=models.CharField(max_length=20,blank=True, null=True)
     alan8=models.CharField(max_length=20,blank=True,null=True)
 
+    def __str__(self):
+        return self.isim
+
 
